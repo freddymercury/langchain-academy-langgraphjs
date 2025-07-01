@@ -1,0 +1,23 @@
+{
+  "name": "module2",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "ts-node --esm src/stateSchema.ts",
+    "build": "tsc -p .",
+    "start": "node dist/stateSchema.js"
+  },
+  "dependencies": {
+    "@langchain/community": "^0.3.0",
+    "@langchain/langgraph": "^0.2.74",
+    "@langchain/openai": "^0.5.16",
+    "chatgpt": "^5.2.3",
+    "dotenv": "^16.4.5",
+    "langchain": "^0.3.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.10.6",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.4.2"
+  }
+}
