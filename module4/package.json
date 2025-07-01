@@ -1,0 +1,20 @@
+{
+  "name": "langgraph-js-academy-module4",
+  "version": "1.0.0",
+  "description": "Module 4 of the LangGraph JS Academy: Building Your Assistant.",
+  "main": "src/index.ts",
+  "type": "module",
+  "scripts": {
+    "start": "tsx src/parallelization.ts"
+  },
+  "dependencies": {
+    "@langchain/core": "^0.3.61",
+    "@langchain/langgraph": "^0.3.6",
+    "@langchain/openai": "^0.5.16",
+    "dotenv": "^16.0.0"
+  },
+  "devDependencies": {
+    "tsx": "^4.7.0",
+    "typescript": "^5.0.0"
+  }
+}
