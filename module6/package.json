@@ -1,0 +1,18 @@
+{
+  "name": "module6",
+  "version": "1.0.0",
+  "description": "LangGraph Academy Module 6: Deployment",
+  "main": "src/deploymentConcepts.ts",
+  "type": "module",
+  "scripts": {
+    "start": "tsx src/deploymentConcepts.ts"
+  },
+  "dependencies": {
+    "@langchain/langgraph": "^0.3.6",
+    "@langchain/openai": "^0.5.16",
+    "dotenv": "^16.6.1",
+    "tsx": "^4.20.3",
+    "uuid": "^11.1.0"
+  },
+  "devDependencies": {}
+} 
