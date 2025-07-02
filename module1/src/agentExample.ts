@@ -1,3 +1,4 @@
+//https://academy.langchain.com/courses/take/intro-to-langgraph/lessons/58239232-lesson-6-agent
 import 'dotenv/config';
 import { StateGraph, Annotation, START, END } from '@langchain/langgraph';
 import { ToolNode, toolsCondition } from '@langchain/langgraph/prebuilt';

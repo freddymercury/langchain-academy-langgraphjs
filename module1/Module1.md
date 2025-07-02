@@ -118,7 +118,8 @@ npx ts-node --esm src/router.ts
 npx ts-node --esm src/routerTools.ts        # Lesson 5
 npx ts-node --esm src/agent.ts              
 npx ts-node --esm src/agentExample.ts       # Lesson 6
-npx ts-node --esm src/agentMemory.ts        # Lesson 7
+npx ts-node --esm src/agentMemory.ts        
+npx ts-node --esm src/agentMemoryExample.ts # Lesson 7
 ```
 
 ### Compile then run
