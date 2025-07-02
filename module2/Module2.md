@@ -134,7 +134,7 @@ npx ts-node --esm src/stateReducersExample.ts    # Complete reducer examples
 
 ---
 
-## 4. Lesson 4 • Trim and Filter Messages
+## 5. Lesson 4 • Trim and Filter Messages
 
 *How to manage long-running conversations by filtering and trimming messages.*
 
@@ -169,7 +169,41 @@ npx ts-node --esm src/trimFilterMessagesExample.ts    # Trim and filter messages
 
 ---
 
-## 5. Lesson 4 • Checkpoint Savers
+## 6. Lesson 5 • Chatbot with Summarization
+
+*Building a chatbot that uses LLM-powered summarization to maintain conversation context while managing token costs.*
+
+Instead of just trimming or filtering messages, this lesson shows how to use LLMs to produce a running summary of the conversation. This allows us to retain a compressed representation of the full conversation, rather than just removing it with trimming or filtering.
+
+### Key Concepts
+
+- **Message Summarization**: Using LLMs to create summaries of conversation history
+- **Memory with Persistence**: Using MemorySaver for thread-based conversation persistence
+- **Conditional Logic**: Triggering summarization based on message count thresholds
+- **State Management**: Managing both messages and summary in graph state
+
+### Examples
+
+```ts
+// module2/src/summarizationChatbotExample.ts
+// Comprehensive examples showing:
+// 1. Custom state schema with summary field
+// 2. LLM-powered conversation summarization
+// 3. Message removal after summarization
+// 4. Thread-based persistent conversations
+// 5. Conditional summarization triggers
+```
+
+**Run the examples:**
+
+```bash
+cd module2
+npx ts-node --esm src/summarizationChatbotExample.ts    # Chatbot with summarization
+```
+
+---
+
+## 7. Lesson 6 • Checkpoint Savers
 
 *Using MemorySaver and SqliteSaver.*
 
@@ -180,7 +214,7 @@ npx ts-node --esm src/trimFilterMessagesExample.ts    # Trim and filter messages
 
 ---
 
-## 6. Lesson 5 • Rolling Window Memory
+## 8. Lesson 7 • Rolling Window Memory
 
 *Only keep last N messages in state.*
 
@@ -191,7 +225,7 @@ npx ts-node --esm src/trimFilterMessagesExample.ts    # Trim and filter messages
 
 ---
 
-## 7. Lesson 6 • Persistence
+## 9. Lesson 8 • Persistence
 
 *Thread-level and cross-thread persistence.*
 
@@ -202,7 +236,7 @@ npx ts-node --esm src/trimFilterMessagesExample.ts    # Trim and filter messages
 
 ---
 
-## 8. Lesson 7 • Long-term Memory
+## 10. Lesson 9 • Long-term Memory
 
 *Semantic search for memory.*
 
@@ -213,7 +247,7 @@ npx ts-node --esm src/trimFilterMessagesExample.ts    # Trim and filter messages
 
 ---
 
-## 9. Lesson 8 • Human-in-the-loop (optional/advanced)
+## 11. Lesson 10 • Human-in-the-loop (optional/advanced)
 
 *Interrupts, editing state.*
 
