@@ -28,6 +28,20 @@ npm install           # if you haven't already
 npm run dev -- src/<lesson>.ts
 ```
 
+### 🏃‍♂️ Run the Examples
+
+**Basic examples (any Node.js version):**
+```bash
+npx tsx src/stateSchemaExample.ts              # State schema basics
+npx tsx src/summarizationChatbotExample.ts     # Chatbot with summarization
+```
+
+**External memory examples (requires Node.js 20 LTS):**
+```bash
+nvm use                                         # Switch to Node.js 20 (uses .nvmrc)
+npx tsx src/summarizationChatbotExternalMemExample.ts  # Chatbot with SQLite persistence
+```
+
 ---
 
 ## 📝 Lessons & Examples
@@ -78,15 +92,41 @@ npm run dev -- src/<lesson>.ts
 - Builds a chatbot that keeps conversation history, summarizes it, and responds to user input using an LLM.
 
 ### 10. Chatbot with Summarization & External Memory
-**File:** `summarizationChatbotExternalMemory.ts`
-- Extends the chatbot to use a vector store for external memory (semantic search).
+**File:** `summarizationChatbotExternalMemExample.ts`
+- Demonstrates external persistence using SQLite database storage.
+- Shows conversation summarization with durable memory that survives application restarts.
+- Includes thread isolation and comprehensive persistence testing.
 
 ---
 
 ## 🛠 Prerequisites
-- Node.js 18+
+- **Node.js 20+ (LTS Required)** - See gotcha below ⚠️
 - OpenAI API key (for LLM/embedding examples)
 - Install dependencies as shown above
+
+### ⚠️ Node.js Version Gotcha - SQLite Dependencies
+
+**CRITICAL:** The external memory examples require `@langchain/langgraph-checkpoint-sqlite` which depends on `better-sqlite3`. This native module:
+
+- ✅ **Works with Node.js LTS versions** (16, 18, 20)
+- ❌ **Fails with Node.js 24+** (too new, no prebuilt binaries)
+- 📌 **Pinned to Node.js 20** via `.nvmrc` file
+
+**Setup Instructions:**
+```bash
+# Use nvm to switch to Node.js 20 LTS
+nvm use          # Uses .nvmrc file (Node.js 20)
+npm install      # Now SQLite dependencies will install cleanly
+
+# If you don't have Node.js 20:
+nvm install 20
+nvm use 20
+```
+
+**Without LTS Node.js, you'll see compilation errors like:**
+- `gyp: No Xcode or CLT version detected`
+- `better-sqlite3 compilation failed`
+- `node-gyp build errors`
 
 ---
 

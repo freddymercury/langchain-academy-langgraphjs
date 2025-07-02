@@ -203,7 +203,52 @@ npx ts-node --esm src/summarizationChatbotExample.ts    # Chatbot with summariza
 
 ---
 
-## 7. Lesson 6 • Checkpoint Savers
+## 6. Lesson 6 • Chatbot with External Memory
+
+*Building a chatbot with summarization and external SQLite database persistence.*
+
+This lesson demonstrates how to use external databases for persistent memory that survives application restarts. Instead of using in-memory storage, we use SQLite as a checkpointer to store conversation state externally.
+
+### Key Concepts
+
+- **External Database Persistence**: Using SQLite for durable storage that persists across application restarts
+- **SQLite Checkpointer**: LangGraph's `SqliteSaver` for external database checkpointing
+- **Thread Isolation**: Multiple conversation threads with separate state storage
+- **Application Restart Resilience**: State persistence that survives complete application restarts
+- **Database File Management**: Creating and managing SQLite database files
+
+### Examples
+
+```ts
+// module2/src/summarizationChatbotExternalMemExample.ts
+// Comprehensive examples showing:
+// 1. SQLite checkpointer setup with persistent database files
+// 2. Conversation state persistence across application restarts
+// 3. Thread isolation with external database storage
+// 4. Message summarization with external memory
+// 5. Database file creation and management
+// 6. Complete restart simulation demonstrating persistence
+```
+
+**Run the examples:**
+
+```bash
+cd module2
+# IMPORTANT: Switch to Node.js 20 LTS (required for SQLite dependencies)
+nvm use                  # Uses .nvmrc file to switch to Node.js 20
+
+# Dependencies are already installed via npm install
+# Run the external memory example
+npx tsx src/summarizationChatbotExternalMemExample.ts    # External memory with SQLite
+```
+
+### ⚠️ Node.js Version Requirement
+
+**CRITICAL:** This example requires `@langchain/langgraph-checkpoint-sqlite` which depends on `better-sqlite3`. This native module only works with Node.js LTS versions (16, 18, 20) and will fail with Node.js 24+. The `.nvmrc` file pins this module to Node.js 20.
+
+---
+
+## 7. Lesson 7 • Checkpoint Savers
 
 *Using MemorySaver and SqliteSaver.*
 

@@ -10,6 +10,7 @@
   "dependencies": {
     "@langchain/community": "^0.3.0",
     "@langchain/langgraph": "^0.2.74",
+    "@langchain/langgraph-checkpoint-sqlite": "^0.1.5",
     "@langchain/openai": "^0.5.16",
     "chatgpt": "^5.2.3",
     "dotenv": "^16.6.1",
@@ -18,6 +19,7 @@
   "devDependencies": {
     "@types/node": "^20.10.6",
     "ts-node": "^10.9.2",
+    "tsx": "^4.19.2",
     "typescript": "^5.4.2"
   }
 }
