@@ -111,6 +111,8 @@ Create `tsconfig.json` in **module1** (matches the repo):
 
 ```bash
 npx ts-node --esm src/simpleGraph.ts        # Lesson 2
+npx ts-node --esm src/simpleGraphHappySad.ts
+
 npx ts-node --esm src/chainNode.ts          # Lesson 4
 npx ts-node --esm src/router.ts             # Lesson 5
 npx ts-node --esm src/agent.ts              # Lesson 6
