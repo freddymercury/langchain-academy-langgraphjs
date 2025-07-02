@@ -74,11 +74,30 @@ npx ts-node --esm src/stateSchemaExample.ts    # Comprehensive examples
 
 ## 3. Lesson 2 • Reducers
 
-*What is a reducer?*
+*What is a reducer and how do they solve parallel state update conflicts?*
+
+State reducers define how to combine state updates when multiple nodes attempt to modify the same state key simultaneously. They enable parallel execution by specifying merge strategies instead of causing conflicts.
+
+### Basic Reducer Concepts
+
+The simplest approach uses custom reducer functions with LangGraph's Annotation system:
 
 ```ts
-// module2/src/reducer.ts
-// Example code will go here
+// module2/src/stateReducersExample.ts
+// Comprehensive examples showing:
+// 1. Default overwriting behavior (and its limitations)
+// 2. Parallel execution conflicts (InvalidUpdateError)
+// 3. Array concatenation reducers  
+// 4. Custom reducers for null safety
+// 5. MessagesState and message operations
+// 6. Message adding, overwriting, and removal
+```
+
+**Run the examples:**
+
+```bash
+cd module2
+npx ts-node --esm src/stateReducersExample.ts    # Complete reducer examples
 ```
 
 ---
