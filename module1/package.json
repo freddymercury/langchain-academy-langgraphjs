@@ -10,10 +10,12 @@
   "license": "ISC",
   "description": "",
   "dependencies": {
+    "@langchain/core": "^0.3.61",
     "@langchain/langgraph": "^0.2.74",
     "@langchain/openai": "^0.5.16",
     "dotenv": "^17.0.1",
-    "langchain": "^0.3.29"
+    "langchain": "^0.3.29",
+    "zod": "^3.25.67"
   },
   "devDependencies": {
     "@langchain/langgraph-cli": "^0.0.41",
