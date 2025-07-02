@@ -49,4 +49,9 @@ build*/
 .DS_Store
 
 # Jupyter Notebook checkpoints
-.ipynb_checkpoints/ 
+.ipynb_checkpoints/
+
+# SQLite database files (runtime generated)
+module2/state_db/
+**/state_db/
+*.db
