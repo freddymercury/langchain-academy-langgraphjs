@@ -29,11 +29,45 @@ npm i -D @langchain/langgraph-cli   # optional CLI & Studio
 
 ## 2. Lesson 1 • State Schemas
 
-*What is a state schema?*
+*What is a state schema and how do we define them in different ways?*
+
+State schemas define the structure and types of data that your LangGraph will use. All nodes communicate through this schema. LangGraph.js provides flexibility in how you define state schemas.
+
+### Basic State Schema
+
+The simplest approach uses LangGraph's Annotation system:
 
 ```ts
 // module2/src/stateSchema.ts
-// Example code will go here
+import { StateGraph, Annotation } from '@langchain/langgraph';
+
+const State = Annotation.Root({
+  input: Annotation<string>(),
+  output: Annotation<string>(),
+  _private: Annotation<number>(), // private/internal state
+});
+```
+
+### Comprehensive Examples
+
+For a complete exploration of different state schema approaches (TypeScript interfaces, classes, validation, etc.):
+
+```ts
+// module2/src/stateSchemaExample.ts
+// Comprehensive examples showing:
+// 1. Basic Annotation System (recommended)
+// 2. TypeScript Interface approach (TypedDict equivalent)
+// 3. Class-based approach (dataclass equivalent) 
+// 4. Runtime validation (Pydantic equivalent)
+// 5. Advanced schemas with multiple types
+```
+
+**Run the examples:**
+
+```bash
+cd module2
+npx ts-node --esm src/stateSchema.ts           # Basic example
+npx ts-node --esm src/stateSchemaExample.ts    # Comprehensive examples
 ```
 
 ---
