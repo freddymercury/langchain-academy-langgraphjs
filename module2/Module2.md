@@ -72,7 +72,39 @@ npx ts-node --esm src/stateSchemaExample.ts    # Comprehensive examples
 
 ---
 
-## 3. Lesson 2 • Reducers
+## 3. Lesson 2 • Multiple Schemas
+
+*How to work with private state and input/output schemas in LangGraph.*
+
+Multiple schemas allow you to have more control over state management by using different schemas for internal processing versus input/output, or by passing private state between nodes that doesn't appear in the final output.
+
+### Key Concepts
+
+- **Private State**: Internal state that passes between nodes but isn't part of the graph's input/output
+- **Input/Output Filtering**: Using specific schemas to control what data enters and exits the graph
+- **Schema Composition**: Working with comprehensive schemas where different nodes focus on different fields
+
+### Examples
+
+```ts
+// module2/src/multipleSchemasExample.ts
+// Comprehensive examples showing:
+// 1. Private state passing between nodes
+// 2. Input/output schema filtering patterns
+// 3. Practical multi-schema approaches for real applications
+// 4. LangGraph.js limitations and workarounds
+```
+
+**Run the examples:**
+
+```bash
+cd module2
+npx ts-node --esm src/multipleSchemasExample.ts    # Multiple schemas examples
+```
+
+---
+
+## 4. Lesson 3 • Reducers
 
 *What is a reducer and how do they solve parallel state update conflicts?*
 
@@ -102,7 +134,7 @@ npx ts-node --esm src/stateReducersExample.ts    # Complete reducer examples
 
 ---
 
-## 4. Lesson 3 • Checkpoint Savers
+## 5. Lesson 4 • Checkpoint Savers
 
 *Using MemorySaver and SqliteSaver.*
 
@@ -113,7 +145,7 @@ npx ts-node --esm src/stateReducersExample.ts    # Complete reducer examples
 
 ---
 
-## 5. Lesson 4 • Rolling Window Memory
+## 6. Lesson 5 • Rolling Window Memory
 
 *Only keep last N messages in state.*
 
@@ -124,7 +156,7 @@ npx ts-node --esm src/stateReducersExample.ts    # Complete reducer examples
 
 ---
 
-## 6. Lesson 5 • Persistence
+## 7. Lesson 6 • Persistence
 
 *Thread-level and cross-thread persistence.*
 
@@ -135,7 +167,7 @@ npx ts-node --esm src/stateReducersExample.ts    # Complete reducer examples
 
 ---
 
-## 7. Lesson 6 • Long-term Memory
+## 8. Lesson 7 • Long-term Memory
 
 *Semantic search for memory.*
 
@@ -146,7 +178,7 @@ npx ts-node --esm src/stateReducersExample.ts    # Complete reducer examples
 
 ---
 
-## 8. Lesson 7 • Human-in-the-loop (optional/advanced)
+## 9. Lesson 8 • Human-in-the-loop (optional/advanced)
 
 *Interrupts, editing state.*
 
