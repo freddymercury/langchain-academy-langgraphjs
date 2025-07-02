@@ -134,6 +134,41 @@ npx ts-node --esm src/stateReducersExample.ts    # Complete reducer examples
 
 ---
 
+## 4. Lesson 4 • Trim and Filter Messages
+
+*How to manage long-running conversations by filtering and trimming messages.*
+
+Long-running conversations result in high token usage and latency if we are not careful, because we pass a growing list of messages to the model. LangGraph provides several ways to address this challenge.
+
+### Key Concepts
+
+- **Message Filtering**: Remove specific messages from state using `RemoveMessage`
+- **Message Trimming**: Limit message history based on token count using `trimMessages`
+- **Node-level Filtering**: Filter messages at the node level without modifying state
+- **Custom Message Management**: Advanced patterns for sophisticated message handling
+
+### Examples
+
+```ts
+// module2/src/trimFilterMessagesExample.ts
+// Comprehensive examples showing:
+// 1. Basic MessagesState setup and usage
+// 2. Simple graph with chat model simulation
+// 3. Filtering messages with RemoveMessage and add_messages reducer
+// 4. Filtering messages by passing filtered list to model
+// 5. Trimming messages based on token count (conceptual)
+// 6. Combined example with custom message management
+```
+
+**Run the examples:**
+
+```bash
+cd module2
+npx ts-node --esm src/trimFilterMessagesExample.ts    # Trim and filter messages examples
+```
+
+---
+
 ## 5. Lesson 4 • Checkpoint Savers
 
 *Using MemorySaver and SqliteSaver.*
