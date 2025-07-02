@@ -114,7 +114,8 @@ npx ts-node --esm src/simpleGraph.ts
 npx ts-node --esm src/simpleGraphHappySad.ts # Lesson 2
 npx ts-node --esm src/chainNode.ts          
 npx ts-node --esm src/chainExample.ts       # Lesson 4
-npx ts-node --esm src/router.ts             # Lesson 5
+npx ts-node --esm src/router.ts             
+npx ts-node --esm src/routerTools.ts        # Lesson 5
 npx ts-node --esm src/agent.ts              # Lesson 6
 npx ts-node --esm src/agentMemory.ts        # Lesson 7
 ```
