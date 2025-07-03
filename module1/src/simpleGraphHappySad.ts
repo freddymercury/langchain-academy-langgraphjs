@@ -1,7 +1,7 @@
 // Typescript version of the simple graph example
 // https://academy.langchain.com/courses/take/intro-to-langgraph/lessons/58238187-lesson-2-simple-graph
 
-import { StateGraph, Annotation } from '@langchain/langgraph';
+import { StateGraph, Annotation, START, END } from '@langchain/langgraph';
 
 // Define the state
 const State = Annotation.Root({
@@ -34,10 +34,10 @@ const graph = new StateGraph(State)
   .addNode("node_1", node_1)
   .addNode("node_2", node_2)
   .addNode("node_3", node_3)
-  .addEdge("__start__", "node_1")
+  .addEdge(START, "node_1")
   .addConditionalEdges("node_1", decide_mood)
-  .addEdge("node_2", "__end__")
-  .addEdge("node_3", "__end__");
+  .addEdge("node_2", END)
+  .addEdge("node_3", END);
 
 // Compile and invoke
 const app = graph.compile();

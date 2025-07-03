@@ -1,9 +1,13 @@
 {
   "compilerOptions": {
     "module": "ESNext",
-    "moduleResolution": "Bundler",
+    "moduleResolution": "Node",
     "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
     "strict": true,
     "target": "ES2022"
+  },
+  "ts-node": {
+    "esm": true
   }
 }
